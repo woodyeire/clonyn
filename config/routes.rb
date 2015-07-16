@@ -1,5 +1,7 @@
 Clonyn::Application.routes.draw do
-  resources :statuses
+  devise_for :users
+  root to: 'statuses#index'
+  resources :statuses, :users
 
 
   # The priority is based upon order of creation:
