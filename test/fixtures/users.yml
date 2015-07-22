@@ -4,4 +4,11 @@ john:
     first_name: "John"
     last_name: "Murphy"
     email: "johnmurphyty@gmail.com"
-    profile_name: "HHHHHH"
+    profile_name: "johnmurphy"
+
+
+jim:
+    first_name: "Jim"
+    last_name: "Hoskins"
+    email: "jim@teamtreehouse.com"
+    profile_name: "jimhoskins"

@@ -13,6 +13,10 @@ Clonyn::Application.routes.draw do
   resources :statuses, :users
   get 'feed', to: 'statuses#index', as: :feed
   root to: 'statuses#index'
+  
+  
+  get '/:id', to: 'profiles#show'
+  
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
