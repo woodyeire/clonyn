@@ -4,6 +4,10 @@
 
 <%= link_to "Post a New Status", new_status_path, class: "btn btn-success " %>
 
+
+<!-- The below code will embed the screenconnect join feature. Leaving it here for reference -->
+<!-- <iframe src="https://clonyn.screenconnect.com/?Theme=Embedded" style="width: 800px; height: 300px; border-width: 0px;"></iframe> -->
+
 <% @statuses.each do |status| %>
 	<div class="status">
 		<div class="row">
