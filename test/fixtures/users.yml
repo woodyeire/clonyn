@@ -1,6 +1,6 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
 
-john:
+johnmurphy:
     first_name: "John"
     last_name: "Murphy"
     email: "johnmurphyty@gmail.com"
