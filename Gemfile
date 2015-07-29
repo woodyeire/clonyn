@@ -9,9 +9,12 @@ gem 'rails', '3.2.18'
 gem 'devise'
 gem 'test-unit'
 gem 'simple_form'
+gem 'state_machine'
+
 
 group :test do
   gem 'shoulda'
+  gem 'factory_girl_rails'
 end
 
 group :development, :test do

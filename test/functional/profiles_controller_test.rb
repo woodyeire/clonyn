@@ -17,6 +17,7 @@ class ProfilesControllerTest < ActionController::TestCase
     assert assigns(:user)
     assert_not_empty assigns(:statuses)
   end
+
   
   test "only shows the correct user's statuses " do
     get :show, id: users(:john).profile_name
