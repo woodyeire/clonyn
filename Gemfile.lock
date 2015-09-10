@@ -45,6 +45,11 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
+    draper (2.1.0)
+      actionpack (>= 3.0)
+      activemodel (>= 3.0)
+      activesupport (>= 3.0)
+      request_store (~> 1.0)
     erubis (2.7.0)
     execjs (2.5.2)
     factory_girl (4.5.0)
@@ -58,6 +63,9 @@ GEM
     jquery-rails (3.1.3)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
+    js-routes (1.1.0)
+      railties (>= 3.2)
+      sprockets-rails
     json (1.8.3)
     mail (2.5.4)
       mime-types (~> 1.16)
@@ -93,6 +101,7 @@ GEM
     rake (10.4.2)
     rdoc (3.12.2)
       json (~> 1.4)
+    request_store (1.2.0)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
     sass (3.4.15)
@@ -114,8 +123,15 @@ GEM
       multi_json (~> 1.0)
       rack (~> 1.0)
       tilt (~> 1.1, != 1.3.0)
+    sprockets-rails (0.0.1)
+      sprockets (>= 1.0.2)
     sqlite3 (1.3.10)
     state_machine (1.2.0)
+    strong_parameters (0.2.3)
+      actionpack (~> 3.0)
+      activemodel (~> 3.0)
+      activesupport (~> 3.0)
+      railties (~> 3.0)
     test-unit (3.0.8)
       power_assert
     thor (0.19.1)
@@ -137,8 +153,10 @@ PLATFORMS
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
   devise
+  draper
   factory_girl_rails
   jquery-rails
+  js-routes
   pg
   rails (= 3.2.18)
   sass-rails (~> 3.2.3)
@@ -146,5 +164,6 @@ DEPENDENCIES
   simple_form
   sqlite3
   state_machine
+  strong_parameters
   test-unit
   uglifier (>= 1.0.3)

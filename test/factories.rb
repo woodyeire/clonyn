@@ -1,7 +1,7 @@
 FactoryGirl.define do
     factory :user do
         first_name 'First'
-        last_name 'Last'
+        last_name  'Last'
         sequence(:email) {|n| "user#{n}@example.com"}
         sequence(:profile_name) {|n| "user#{n}" }
         
@@ -19,6 +19,10 @@ FactoryGirl.define do
         
         factory :requested_user_friendship do
             state 'requested'
+        end
+        
+        factory :accepted_user_friendship do
+            state 'accepted'
         end
     end
 end

@@ -10,7 +10,9 @@ gem 'devise'
 gem 'test-unit'
 gem 'simple_form'
 gem 'state_machine'
-
+gem 'strong_parameters'
+gem 'draper'
+gem 'js-routes'
 
 group :test do
   gem 'shoulda'

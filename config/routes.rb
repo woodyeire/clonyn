@@ -19,6 +19,9 @@ Clonyn::Application.routes.draw do
   
   
   resources :user_friendships do
+    member do
+      put :accept
+    end
   end
   
   

@@ -15,7 +15,7 @@ class ProfilesControllerTest < ActionController::TestCase
   test "that variables are assigend on successful profile viewing" do
     get :show, id: users(:john).profile_name
     assert assigns(:user)
-    assert_not_empty assigns(:statuses)
+    !assert_blank assigns(:statuses)
   end
 
   
