@@ -1,12 +1,16 @@
-<div class="page-header">
-	<h1>Active Tickets<h1>
-</div>
 
-<%= link_to "Log a Support Ticket", new_status_path, class: "btn btn-success " %>
+
 
 
 <!-- The below code will embed the screenconnect join feature. Leaving it here for reference -->
 <!-- <iframe src="https://clonyn.screenconnect.com/?Theme=Embedded" style="width: 800px; height: 300px; border-width: 0px;"></iframe> -->
+<% if signed_in? %>
+<div class="page-header">
+	<h1>Active Tickets<h1>
+</div>
+<h4>Think you can help one of our Users?<br />
+Click on their profile avatar below and request their Friendship.</h4>
+<%= link_to "Log a Support Ticket", new_status_path, class: "btn btn-success " %>
 
 <% @statuses.each do |status| %>
 	<div class="status">
@@ -27,4 +31,8 @@
 	</div>
 </div>
 </div>
+<% end %>
+<% else %>
+<h2>Clonyn is a community based IT Support and eLearning network. Sign up as a Freelancer to provide support, or as a User to receive support.</h2><h3><%= link_to 'Register Now!', register_path %></h3><br />
+
 <% end %>

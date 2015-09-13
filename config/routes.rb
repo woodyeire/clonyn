@@ -1,7 +1,7 @@
 Clonyn::Application.routes.draw do
   get "profiles/show"
 
-
+    
   
     as :user do
       get '/register', to: 'devise/registrations#new', as: :register
@@ -21,18 +21,21 @@ Clonyn::Application.routes.draw do
   resources :user_friendships do
     member do
       put :accept
+      put :block
     end
   end
   
   
   resources :statuses, :users
   get 'feed', to: 'statuses#index', as: :feed
+  get '/host', to: 'host#index', as: 'host'
   root to: 'statuses#index'
   
   
   get '/:id', to: 'profiles#show', as: 'profile'
   
 
+  
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

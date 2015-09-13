@@ -13,8 +13,9 @@
 <% end %>
 
 <% if current_user.friends.include?(@user) %>
+<h3></h3>
 <iframe src="https://clonyn.screenconnect.com/?Theme=Embedded" style="width: 800px; height: 300px; border-width: 0px;"></iframe>
-<h3>Join Code: YYUN</h3>
+
 <% end %>
 <% if @statuses %>
         <% @statuses.each do |status| %>

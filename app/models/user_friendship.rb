@@ -1,4 +1,12 @@
 class UserFriendship < ActiveRecord::Base
+# => @author John Murphy, x14124807
+# => @date 13/09/2015
+#
+# => All classes, models, controllers and views have been built and modified based
+# => on the 'Treebook' tutorials at teamtreehouse.com by Jason Seifer and Jim Hoskins.
+# => @reference https://github.com/jasonseifer/treebook
+# => @reference http://teamtreehouse.com/library/build-a-simple-ruby-on-rails-application
+    
     belongs_to :user
     belongs_to :friend, :class_name => 'User', :foreign_key => 'friend_id'
     
@@ -38,6 +46,7 @@ class UserFriendship < ActiveRecord::Base
         if UserFriendship.exists?(user_id: user_id, friend_id: friend_id, state: 'blocked') ||
             UserFriendship.exists?(user_id: friend_id, friend_id: user_id, state: 'blocked')
         errors.add(:base, "The friendship cannot be added.")
+        end
     end
     
     def send_request_email
@@ -62,6 +71,5 @@ class UserFriendship < ActiveRecord::Base
     
     def block_mutual_friendship
        mutual_friendship.update_attribute(:state, 'blocked') if mutual_friendship
-    end
     end
 end

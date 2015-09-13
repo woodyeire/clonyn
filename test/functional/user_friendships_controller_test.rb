@@ -283,4 +283,15 @@ end
       end
     end
   end
+  
+  
+  context "block" do
+    context "when not logged in" do
+      should 'redirect to the login page' do
+        put :block, id: 1
+        assert_response :redirect
+        assert_redirected_to login_path
+      end
+    end
+  end
 end

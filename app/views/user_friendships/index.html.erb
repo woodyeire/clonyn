@@ -1,7 +1,8 @@
 <div class="page-header">
     <h1>Friends</h1>
 </div>
-
+<h4>To receive Support from one of your friends, click on their profile avatar and enter their support queue.</h4><br />
+<h4>Alternatively, to provide support; go to the <em><%= link_to 'Host', '/host' %></em> page and Join the appropriate session.</h4>
 <% @user_friendships.each do |friendship| %>
     <% friend = friendship.friend %>
     <div id="<%= dom_id(friendship) %>" class="friend row">
