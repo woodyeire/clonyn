@@ -13,6 +13,7 @@ gem 'state_machine'
 gem 'strong_parameters'
 gem 'draper'
 gem 'js-routes'
+gem 'rails_12factor'
 
 group :test do
   gem 'shoulda'
